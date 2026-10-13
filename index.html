@@ -758,7 +758,7 @@
         </div>
       </div>
       
-      <!-- NOUVEAU: 5.5 PMU (via Ozitem) -->
+      <!-- 5.5 PMU (via Ozitem) -->
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content exp-pro">
@@ -851,23 +851,21 @@
         </div>
       </div>
 
-      <!-- DÉBUT DU PROJET MASQUÉ TEMPORAIREMENT 
-<div class="glass-card hover-target reveal stagger-1">
-  <div class="card-content">
-    <span class="badge-holo" style="align-self: flex-start; background: transparent; border-style: dashed; color: var(--text-muted);">Projet Personnel</span>
-    <h4 class="card-title">Architecture AWS 3-Tiers (IaC)</h4>
-    <p class="card-desc">Conception, sécurisation (Zero Trust) et déploiement 100% automatisé d'une infrastructure hautement disponible via Terraform (ALB, ASG, S3, DynamoDB).</p>
-    <a href="https://github.com/mazouz-mehdi/aws-terraform-3tiers-architecture" target="_blank" class="link-hover">Voir sur GitHub <i class="fa-solid fa-arrow-right"></i></a>
-  </div>
-</div>
-FIN DU PROJET MASQUÉ -->
-
       <div class="spotlight-card">
         <div class="card-content">
           <span class="badge badge-ghost" style="align-self: flex-start;">Projet Personnel</span>
           <h4 class="card-title" style="margin-top: 10px;">Infrastructure Hybride (AD/Entra ID)</h4>
           <p class="card-desc">Conception de A à Z : serveurs locaux en HA (AD, DNS, DHCP), sécurisation via GPO et hybridation Microsoft 365 (SSO) via Entra Connect.</p>
           <a href="https://github.com/mazouz-mehdi/Rapport_Infrastructure_Hybride_Mehdi_Mazouz" target="_blank" class="btn-projet btn-hybrid">Voir sur GitHub <i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="spotlight-card">
+        <div class="card-content">
+          <span class="badge badge-ghost" style="align-self: flex-start;">Projet Personnel</span>
+          <h4 class="card-title" style="margin-top: 10px;">Architecture AWS 3-Tiers (IaC)</h4>
+          <p class="card-desc">Conception, sécurisation (Zero Trust) et déploiement 100% automatisé d'une infrastructure hautement disponible via Terraform (ALB, ASG, S3, DynamoDB).</p>
+          <a href="https://github.com/mazouz-mehdi/aws-terraform-3tiers-architecture" target="_blank" class="btn-projet btn-aws">Voir sur GitHub <i class="fa-brands fa-github"></i></a>
         </div>
       </div>
 
@@ -1152,88 +1150,6 @@ Tapez 'help' pour afficher les commandes disponibles.</div>
     }, 500);
   }
 </script>
-
-<style>
-  .btn-projet {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    padding: 12px 30px; border-radius: 50px; font-weight: 600; font-size: 15px;
-    letter-spacing: 0.5px; text-decoration: none; background-color: #0d1117;
-    transition: all 0.3s ease; margin-top: 15px;
-  }
-  .btn-projet:hover { transform: translateY(-2px); }
-
-  .btn-infra { border: 1px solid #00eba0; color: #ffffff; box-shadow: 0 0 12px rgba(0, 235, 160, 0.15); }
-  .btn-infra:hover { box-shadow: 0 0 20px rgba(0, 235, 160, 0.4); background-color: rgba(0, 235, 160, 0.1); }
-
-  .btn-archi { border: 1px solid #ff9d00; color: #ffffff; box-shadow: 0 0 12px rgba(255, 157, 0, 0.15); }
-  .btn-archi:hover { box-shadow: 0 0 20px rgba(255, 157, 0, 0.4); background-color: rgba(255, 157, 0, 0.1); }
-
-  .btn-cloud { border: 1px solid #00a8ff; color: #ffffff; box-shadow: 0 0 12px rgba(0, 168, 255, 0.15); }
-  .btn-cloud:hover { box-shadow: 0 0 20px rgba(0, 168, 255, 0.4); background-color: rgba(0, 168, 255, 0.1); }
-
-  .btn-aws { border: 1px solid #8b5cf6; color: #ffffff; box-shadow: 0 0 12px rgba(139, 92, 246, 0.15); }
-  .btn-aws:hover { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); background-color: rgba(139, 92, 246, 0.1); }
-
-  .btn-hybrid { border: 1px solid #ff0055; color: #ffffff; box-shadow: 0 0 12px rgba(255, 0, 85, 0.15); }
-  .btn-hybrid:hover { box-shadow: 0 0 20px rgba(255, 0, 85, 0.5); background-color: rgba(255, 0, 85, 0.1); }
-
-  .btn-cyber-cv {
-    position: relative;
-    background: rgba(5, 10, 20, 0.8) !important;
-    color: #ffffff !important;
-    font-weight: 500 !important;
-    font-size: 1.05rem !important;
-    border: 1px solid rgba(0, 240, 255, 0.4) !important;
-    padding: 16px 36px !important;
-    border-radius: 100px !important;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-decoration: none !important;
-  }
-
-  .cv-glow-bg {
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(90deg, #00f0ff, #0066ff, #8b5cf6, #00f0ff);
-    background-size: 300% 300%;
-    z-index: -1;
-    border-radius: inherit;
-    animation: plasmaBorder 6s linear infinite;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-  }
-
-  @keyframes plasmaBorder {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  .btn-cyber-cv:hover {
-    transform: scale(1.06) translateY(-3px) !important;
-    border-color: rgba(0, 240, 255, 1) !important;
-    box-shadow: 0 0 45px rgba(0, 240, 255, 0.5), 0 0 20px rgba(139, 92, 246, 0.4) !important;
-    background: rgba(10, 20, 35, 0.95) !important;
-  }
-
-  .btn-cyber-cv:hover .cv-glow-bg {
-    opacity: 1;
-  }
-
-  @keyframes cyberFlash {
-    0% { transform: scale(1); filter: brightness(1); }
-    40% { transform: scale(1.12); filter: brightness(2); background: #00f0ff !important; color: #000 !important; box-shadow: 0 0 70px 20px #00f0ff, 0 0 100px 50px #8b5cf6; }
-    100% { transform: scale(1); filter: brightness(1); }
-  }
-
-  .cyber-opening {
-    animation: cyberFlash 0.5s cubic-bezier(0.1, 1, 0.3, 1) forwards;
-  }
-</style>
 
 </body>
 </html>
