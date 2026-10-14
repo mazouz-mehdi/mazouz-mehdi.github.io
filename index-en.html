@@ -96,36 +96,6 @@
     nav ul li a:hover { color: var(--ai-cyan); text-shadow: 0 0 10px rgba(0,240,255,0.5); }
     
     .nav-actions { display: flex; align-items: center; gap: 10px; }
-    
-    /* --- NETWORK STATUS COMPONENT --- */
-    .network-status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0, 255, 170, 0.05); 
-      border: 1px solid rgba(0, 255, 170, 0.2);
-      padding: 6px 14px;
-      border-radius: 100px;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.75rem;
-      color: #00eba0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background-color: #00eba0;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #00eba0;
-      animation: pulse-ping 2s infinite ease-in-out;
-    }
-
-    @keyframes pulse-ping {
-      0%, 100% { transform: scale(0.8); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 12px #00eba0; }
-    }
 
     .btn-lang {
       background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border);
@@ -463,10 +433,6 @@
   </ul>
   
   <div class="nav-actions">
-    <div class="network-status">
-      <div class="status-dot"></div>
-      <span id="ping-text">Secure Network</span>
-    </div>
     <div class="magnetic-wrap">
       <a href="index.html" class="btn-lang" title="Switch to French">FR</a>
     </div>
@@ -836,17 +802,6 @@
         </div>
       </div>
 
-      <!-- DÉBUT DU PROJET MASQUÉ TEMPORAIREMENT 
-<div class="glass-card hover-target reveal stagger-1">
-  <div class="card-content">
-    <span class="badge-holo" style="align-self: flex-start; background: transparent; border-style: dashed; color: var(--text-muted);">Personal Project</span>
-    <h4 class="card-title">AWS 3-Tier Architecture (IaC)</h4>
-    <p class="card-desc">Design, security (Zero Trust), and 100% automated deployment of a highly available infrastructure via Terraform (ALB, ASG, S3, DynamoDB).</p>
-    <a href="https://github.com/mazouz-mehdi/aws-terraform-3tiers-architecture" target="_blank" class="link-hover">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
-  </div>
-</div>
-FIN DU PROJET MASQUÉ -->
-
       <div class="spotlight-card">
         <div class="card-content">
           <span class="badge badge-ghost" style="align-self: flex-start;">Personal Project</span>
@@ -1059,15 +1014,6 @@ FIN DU PROJET MASQUÉ -->
     `;
     document.head.appendChild(script2);
   }
-
-  // --- NETWORK STATUS PING ANIMATION ---
-  setInterval(() => {
-    const pingElement = document.getElementById('ping-text');
-    if(pingElement) {
-      const fakePing = Math.floor(Math.random() * (28 - 12 + 1)) + 12;
-      pingElement.innerText = `SYS_ONLINE : ${fakePing}ms`;
-    }
-  }, 3500); 
 
 </script>
 
