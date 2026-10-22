@@ -300,6 +300,82 @@
       box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15); 
     }
 
+    /* --- GROUPED TIMELINE FOR LINKEDIN STYLE --- */
+    .timeline-group {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    
+    .timeline-group-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    
+    .timeline-group-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      background: var(--void-black);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .timeline-group-logo i {
+      font-size: 24px;
+      color: var(--ai-cyan);
+    }
+    
+    .timeline-group-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-pure);
+    }
+    
+    .timeline-group-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    
+    .timeline-group-items {
+      position: relative;
+      padding-left: 45px;
+    }
+    
+    .timeline-group-items::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0;
+      bottom: 20px;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .timeline-sub-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .timeline-sub-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .timeline-sub-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: var(--text-muted);
+      border-radius: 50%;
+      left: -25px;
+      top: 10px;
+    }
+
     /* --- FORMATION : VERT MATRIX FLUO & LUMINEUX --- */
     .timeline-content.formation {
       border-color: rgba(0, 255, 128, 0.5);
@@ -656,34 +732,47 @@
 
     <div class="timeline">
 
-      <!-- 0. GPS&O Administrateur Systèmes & Réseaux -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content exp-pro">
-          <div class="timeline-date">OCT. 2025 — OCT. 2026</div>
-          <h4 class="timeline-title">Administrateur Systèmes & Réseaux – (Alternance)</h4>
-          <div class="timeline-org"><i class="fa-solid fa-building"></i> GPS&O, Aubergenville</div>
-          <ul class="data-list">
-            <li><i class="fa-solid fa-terminal"></i> <span><strong>Gestion des identités & des accès (IAM) :</strong> Administration du cycle de vie complet des comptes utilisateurs sous <strong>Microsoft Entra ID</strong> (onboarding/offboarding, suspension et révocation sécurisée).</span></li>
-            <li><i class="fa-solid fa-terminal"></i> <span><strong>Contrôle d'accès & Sécurité :</strong> Gestion des attributions de droits par métier, administration des groupes de sécurité, intégration des accès applicatifs (<strong>SSO</strong>) et installation de certificats.</span></li>
-            <li><i class="fa-solid fa-terminal"></i> <span><strong>Réseau, MCO & Supervision :</strong> Supervision des switchs et de l'infrastructure réseau via le dashboard <strong>Cisco Meraki</strong>, résolution des incidents N2 sous <strong>EasyVista</strong> et maintien opérationnel des comptes applicatifs.</span></li>
-          </ul>
+      <!-- GPS&O GROUPED TIMELINE -->
+      <div class="timeline-group">
+        <div class="timeline-group-header">
+          <div class="timeline-group-logo">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div>
+            <div class="timeline-group-title">Communauté urbaine Grand Paris Seine & Oise (GPS&O)</div>
+            <div class="timeline-group-subtitle">Contrat en alternance · Aubergenville, Île-de-France</div>
+          </div>
         </div>
-      </div>
-
-      <!-- 1. GPS&O -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content exp-pro">
-          <div class="timeline-date">OCT. 2024 — OCT. 2025</div>
-          <h4 class="timeline-title">Chef de projet Solutions Métiers (Alternance)</h4>
-          <div class="timeline-org"><i class="fa-solid fa-building"></i> GPS&O, Aubergenville</div>
-          <ul class="data-list">
-            <li><i class="fa-solid fa-terminal"></i> <span><strong>Pilotage de projets (SaaS) :</strong> Gestion du cycle de vie complet de projets de transformation numérique dans un environnement 100% Cloud.</span></li>
-            <li><i class="fa-solid fa-terminal"></i> <span><strong>MCO & Administration ITSM :</strong> Maintien en condition opérationnelle (MCO) des applications métiers, administration EasyVista et cartographie SI via Power BI.</span></li>
-            <li><i class="fa-solid fa-terminal"></i> <span><strong>Interface stratégique IT/Métier :</strong> Traduction de la complexité technique en langage clair pour éclairer les décisions métiers.</span></li>
-            <li><i class="fa-solid fa-terminal"></i> <span><strong>Gestion financière & Prestataires :</strong> Chiffrage de projets, suivi budgétaire et pilotage de la relation avec les éditeurs.</span></li>
-          </ul>
+        
+        <div class="timeline-group-items">
+          <!-- Poste 2 : Administrateur Systèmes & Réseaux -->
+          <div class="timeline-sub-item">
+            <div class="timeline-sub-dot"></div>
+            <div class="timeline-content exp-pro">
+              <div class="timeline-date">OCT. 2025 — OCT. 2026</div>
+              <h4 class="timeline-title">Administrateur Systèmes & Réseaux</h4>
+              <ul class="data-list">
+                <li><i class="fa-solid fa-terminal"></i> <span><strong>Gestion des identités & des accès (IAM) :</strong> Administration du cycle de vie complet des comptes utilisateurs sous <strong>Microsoft Entra ID</strong> (onboarding/offboarding, suspension et révocation sécurisée).</span></li>
+                <li><i class="fa-solid fa-terminal"></i> <span><strong>Contrôle d'accès & Sécurité :</strong> Gestion des attributions de droits par métier, administration des groupes de sécurité, intégration des accès applicatifs (<strong>SSO</strong>) et installation de certificats.</span></li>
+                <li><i class="fa-solid fa-terminal"></i> <span><strong>Réseau, MCO & Supervision :</strong> Supervision des switchs et de l'infrastructure réseau via le dashboard <strong>Cisco Meraki</strong>, résolution des incidents N2 sous <strong>EasyVista</strong> et maintien opérationnel des comptes applicatifs.</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Poste 1 : Chef de projet Solutions Métiers -->
+          <div class="timeline-sub-item">
+            <div class="timeline-sub-dot"></div>
+            <div class="timeline-content exp-pro">
+              <div class="timeline-date">OCT. 2024 — OCT. 2025</div>
+              <h4 class="timeline-title">Chef de projet Solutions Métiers</h4>
+              <ul class="data-list">
+                <li><i class="fa-solid fa-terminal"></i> <span><strong>Pilotage de projets (SaaS) :</strong> Gestion du cycle de vie complet de projets de transformation numérique dans un environnement 100% Cloud.</span></li>
+                <li><i class="fa-solid fa-terminal"></i> <span><strong>MCO & Administration ITSM :</strong> Maintien en condition opérationnelle (MCO) des applications métiers, administration EasyVista et cartographie SI via Power BI.</span></li>
+                <li><i class="fa-solid fa-terminal"></i> <span><strong>Interface stratégique IT/Métier :</strong> Traduction de la complexité technique en langage clair pour éclairer les décisions métiers.</span></li>
+                <li><i class="fa-solid fa-terminal"></i> <span><strong>Gestion financière & Prestataires :</strong> Chiffrage de projets, suivi budgétaire et pilotage de la relation avec les éditeurs.</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
