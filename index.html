@@ -347,14 +347,22 @@
       padding-left: 45px;
     }
     
+    /* ANIMATED ELECTRIC LINE FOR EVOLUTION */
     .timeline-group-items::before {
       content: '';
       position: absolute;
       left: 24px;
-      top: 0;
+      top: 15px;
       bottom: 20px;
       width: 2px;
-      background: rgba(255, 255, 255, 0.1);
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.1) 40%, var(--ai-cyan) 60%, rgba(255, 255, 255, 0.1) 80%);
+      background-size: 100% 300%;
+      animation: electricFlow 3s linear infinite;
+    }
+
+    @keyframes electricFlow {
+      0% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
     }
     
     .timeline-sub-item {
@@ -366,14 +374,18 @@
       margin-bottom: 0;
     }
     
+    /* ELECTRIC GLOW DOTS */
     .timeline-sub-dot {
       position: absolute;
-      width: 10px;
-      height: 10px;
-      background: var(--text-muted);
+      width: 12px;
+      height: 12px;
+      background: rgba(10, 15, 25, 0.9);
+      border: 2px solid var(--ai-cyan);
       border-radius: 50%;
-      left: -25px;
+      left: -26px;
       top: 10px;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+      z-index: 2;
     }
 
     /* --- FORMATION : VERT MATRIX FLUO & LUMINEUX --- */
